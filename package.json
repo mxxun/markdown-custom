@@ -1,0 +1,25 @@
+{
+    "name": "markdown-custom",
+    "displayName": "markdown-custom",
+    "description": "Italics, bold, inline and quotes are _not enough_",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.54.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "markdown",
+            "aliases": ["Markdown", "markdown"],
+            "extensions": [".md"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "markdown",
+            "scopeName": "text.markdown.custom",
+            "path": "./syntaxes/markdown.tmLanguage.json"
+        }]
+    }
+}
