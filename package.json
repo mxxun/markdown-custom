@@ -11,15 +11,18 @@
     ],
     "contributes": {
         "languages": [{
+            // override inbuilt markdown language config
             "id": "markdown",
-            "aliases": ["Markdown", "markdown"],
-            "extensions": [".md"],
-            "configuration": "./language-configuration.json"
+            "configuration": "./markdown-configuration.json"
+        }
+        , { // target for the grammar?
+            "id": "markdown-custom"
         }],
         "grammars": [{
-            "language": "markdown",
+            "language": "markdown-custom",
             "scopeName": "text.markdown.custom",
-            "path": "./syntaxes/markdown.tmLanguage.json"
+            "path": "./syntaxes/markdown.tmLanguage.json",
+            "injectTo": [ "text.html.markdown" ]
         }]
     }
 }

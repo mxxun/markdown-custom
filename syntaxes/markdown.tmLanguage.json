@@ -1,32 +1,71 @@
-{
-	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-	"name": "Markdown",
-	"patterns": [
-		{
-			"include": "#keywords"
-		},
-		{
-			"include": "#strings"
-		}
-	],
-	"repository": {
-		"keywords": {
-			"patterns": [{
-				"name": "keyword.control.markdown",
-				"match": "\\b(if|while|for|return)\\b"
-			}]
-		},
-		"strings": {
-			"name": "string.quoted.double.markdown",
-			"begin": "\"",
-			"end": "\"",
-			"patterns": [
-				{
-					"name": "constant.character.escape.markdown",
-					"match": "\\\\."
-				}
-			]
-		}
-	},
-	"scopeName": "text.markdown.custom"
+{ "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json"
+,  "name": "Markdown"
+,  "injectionSelector": "L:text.html.markdown"
+,  "patterns": 
+    [ { "match": "(@{2})(((?!@{2}).)+)(@{2})"
+      , "name": "text.markdown.custom.2-at-section"
+      , "captures": 
+        { "1": { "name": "punctuation.definition.2-at.markdown" }
+        , "2": { "name": "markup.other.2-at.markdown" }
+        , "4": { "name": "punctuation.definition.2-at.markdown" }
+        }
+      }
+    , { "match": "(#{2})(((?!#{2}).)+)(#{2})"
+      , "name": "text.markdown.custom.2-sharp-section"
+      , "captures": 
+        { "1": { "name": "punctuation.definition.2-sharp.markdown" }
+        , "2": { "name": "markup.other.2-sharp.markdown" }
+        , "4": { "name": "punctuation.definition.2-sharp.markdown" }
+        }
+      }
+    , { "match": "(%{2})(((?!%{2}).)+)(%{2})"
+      , "name": "text.markdown.custom.2-percent-section"
+      , "captures": 
+        { "1": { "name": "punctuation.definition.2-percent.markdown" }
+        , "2": { "name": "markup.other.2-percent.markdown" }
+        , "4": { "name": "punctuation.definition.2-percent.markdown" }
+        }
+      }
+    , { "match": "(\\^{2})(((?!\\^{2}).)+)(\\^{2})"
+      , "name": "text.markdown.custom.2-cap-section"
+      , "captures": 
+        { "1": { "name": "punctuation.definition.2-cap.markdown" }
+        , "2": { "name": "markup.other.2-cap.markdown" }
+        , "4": { "name": "punctuation.definition.2-cap.markdown" }
+        }
+      }
+    , { "match": "(&{2})(((?!&{2}).)+)(&{2})"
+      , "name": "text.markdown.custom.2-ampersand-section"
+      , "captures": 
+        { "1": { "name": "punctuation.definition.2-ampersand.markdown" }
+        , "2": { "name": "markup.other.2-ampersand.markdown" }
+        , "4": { "name": "punctuation.definition.2-ampersand.markdown" }
+        }
+      }
+    , { "match": "(\\+{2})(((?!\\+{2}).)+)(\\+{2})"
+      , "name": "text.markdown.custom.2-plus-section"
+      , "captures": 
+        { "1": { "name": "punctuation.definition.2-plus.markdown" }
+        , "2": { "name": "markup.other.2-plus.markdown" }
+        , "4": { "name": "punctuation.definition.2-plus.markdown" }
+        }
+      }
+    , { "match": "(={2})(((?!={2}).)+)(={2})"
+      , "name": "text.markdown.custom.2-eq-section"
+      , "captures": 
+        { "1": { "name": "punctuation.definition.2-eq.markdown" }
+        , "2": { "name": "markup.other.2-eq.markdown" }
+        , "4": { "name": "punctuation.definition.2-eq.markdown" }
+        }
+      }
+    , { "match": "(\\|{2})(((?!\\|{2}).)+)(\\|{2})"
+      , "name": "text.markdown.custom.2-pipe-section"
+      , "captures": 
+        { "1": { "name": "punctuation.definition.2-pipe.markdown" }
+        , "2": { "name": "markup.other.2-pipe.markdown" }
+        , "4": { "name": "punctuation.definition.2-pipe.markdown" }
+        }
+      }
+	  ]
+, "scopeName": "text.markdown.custom"
 }
