@@ -14,26 +14,17 @@ For example if there is an image subfolder under your extension project workspac
 
 ### ()
 
-1. our main feature: a bundle of pseudo-markdown delimeters which can have their formatting & etc
+1. our main feature: a bundle of pseudo-markdown delimeters which can have their own formatting & etc
     1. doubles of every: @#%^&+=|
     1. @@this@@
-    1. ##this## possibly does not work because tags interfere
+    1. ##this##
     1. %%this%%
     1. ^^this^^
-    1. &&this&& also might not work because ampersands are parsed specially
+    1. &&this&&
     1. ++this++
     1. ==this==
     1. ||this||
 
-  Со
-@@стилями@@
-##отображения##
-%%VS Code%%
-^^можно^^
-&&делать&&
-++аж++
-==вот==
-||такое||
 
 ## Requirements
 
