@@ -1,28 +1,44 @@
 {
-    "name": "markdown-custom",
-    "displayName": "markdown-custom",
-    "description": "Italics, bold, inline and quotes are _not enough_",
-    "version": "0.0.1",
-    "engines": {
-        "vscode": "^1.54.0"
-    },
-    "categories": [
-        "Programming Languages"
-    ],
-    "contributes": {
-        "languages": [{
-            // override inbuilt markdown language config
-            "id": "markdown",
-            "configuration": "./markdown-configuration.json"
-        }
-        , { // target for the grammar?
-            "id": "markdown-custom"
-        }],
-        "grammars": [{
-            "language": "markdown-custom",
-            "scopeName": "text.markdown.custom",
-            "path": "./syntaxes/markdown.tmLanguage.json",
-            "injectTo": [ "text.html.markdown" ]
-        }]
+  "name": "markdown-custom",
+  "displayName": "markdown-custom",
+  "description": "Italics, bold, inline and quotes are _not enough_",
+  "version": "0.0.1",
+  "publisher": "mxxun",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.54.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "markdown",
+      "configuration": "./markdown-configuration.json"
     }
+    , {
+      "id": "markdown-custom"
+    }],
+    "grammars": [{
+      "language": "markdown-custom",
+      "scopeName": "text.markdown.custom",
+      "path": "./syntaxes/markdown.tmLanguage.json",
+      "injectTo": [ "text.html.markdown" ]
+    }],
+    "configurationDefaults": {
+      "editor.tokenColorCustomizations": {
+        "textMateRules": [
+          { "scope": "markup.other.2-at.markdown",        "settings": { "foreground": "#f00" } },
+          { "scope": "markup.other.2-sharp.markdown",     "settings": { "foreground": "#f80" } },
+          { "scope": "markup.other.2-percent.markdown",   "settings": { "foreground": "#ff0" } },
+          { "scope": "markup.other.2-cap.markdown",       "settings": { "foreground": "#0f0" } },
+          { "scope": "markup.other.2-ampersand.markdown", "settings": { "foreground": "#0ff" } },
+          { "scope": "markup.other.2-plus.markdown",      "settings": { "foreground": "#00f" } },
+          { "scope": "markup.other.2-eq.markdown",        "settings": { "foreground": "#f0f" } },
+          { "scope": "markup.other.2-pipe.markdown",      "settings": { "foreground": "#888" } }
+        ]
+      }
+    }
+  
+  }
 }

@@ -1,79 +1,41 @@
 # markdown-custom README
 
-This is the README for your extension "markdown-custom". After writing up a brief description, we recommend including the following sections.
+## Installation
+This extension is not listed on the vscode extension marketplace, so you'll want to build it yourself. To do that:
+1. Clone this repo
+1. Acquire `vsce` to package the extension:
+    1. Have an npm
+    2. `npm install -g vsce`
+1. From the root of this repo, package:
+    1. `vsce package`
+    1. `vsce` may object to unfilled fields. These matter not.
+1. In VS Code, open the Command Palette (Ctrl + Shift + P) and run the "Extensions: Install from VSIX..." to install the VSIX file created on the last step.
+1. C-P -> `Reload Window` if necessary.
+1. Clean up, if desired:
+    > `npm uninstall -g vsce`
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+Our main feature: a bundle of pseudo-markdown delimeters which can have their own formatting.
+Delimteters used: `@#%^&+=|`
+1. @@here@@
+1. ##look##
+1. %%what%%
+1. ^^can^^
+1. &&be&&
+1. ++done++
+1. ==with==
+1. ||them!||
 
-For example if there is an image subfolder under your extension project workspace:
+(Insert a picture of the colored display above, as seen in the editor.)
 
-\!\[feature X\]\(images/feature-x.png\)
+Secondary: vscode provides a bundle of behaviors for parens (automatic creation of a closing pair, surround of selection) that we abuse for convenience of delimeters above, and a bit beyond. See `markdown-configuration.json` for details.
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
-
-### ()
-
-1. our main feature: a bundle of pseudo-markdown delimeters which can have their own formatting & etc
-    1. doubles of every: @#%^&+=|
-    1. @@this@@
-    1. ##this##
-    1. %%this%%
-    1. ^^this^^
-    1. &&this&&
-    1. ++this++
-    1. ==this==
-    1. ||this||
-
-
-## Requirements
-
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
-
-## Extension Settings
-
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: enable/disable this extension
-* `myExtension.thing`: set to `blah` to do something
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
+## Troubleshooting, workarounds, customization
+1. Coloring does not work if your user (or workspace) settings override `"editor.tokenColorCustomizations"`; user-defined value for it prevails without merging.
+    1. Workaround: take the color section defined in `package.json` and splice it into your user config.
+    1. This also works if you wish for different hues.
 
 ## Release Notes
 
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
------------------------------------------------------------------------------------------------------------
-
-## Working with Markdown
-
-**Note:** You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (macOS) to see a list of Markdown snippets
-
-### For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+(If there's no release, are there any release notes?)
