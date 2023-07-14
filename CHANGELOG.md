@@ -1,9 +1,10 @@
-# Change Log
-
-All notable changes to the "markdown-custom" extension will be documented in this file.
-
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
+# Changelog
 
 ## [Unreleased]
 
-- Initial release
+## [0.1.0] — 2023-07-14
+Added: more brackets for code to track: ⟦⟧, ⟨⟩, ⟪⟫, ⦃⦄, ⦅⦆, ⦇⦈, 【】, 〖〗.
+
+## [0.0.1] — ???
+Initial.
+Delimiters in use: `@#%^&+=|`

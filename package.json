@@ -2,9 +2,10 @@
   "name": "markdown-custom",
   "displayName": "markdown-custom",
   "description": "Italics, bold, inline and quotes are _not enough_",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "publisher": "mxxun",
-  "license": "MIT",
+  "license": "Unlicense",
+  "repository": "https://github.com/mxxun/markdown-custom",
   "engines": {
     "vscode": "^1.54.0"
   },
