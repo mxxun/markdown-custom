@@ -56,6 +56,9 @@ Paren-matching:
 
 ## Release Notes
 
+### [0.1.1] — 2024-01-25
+More brackets: ⌜⌝, ⌞⌟.
+
 ### [0.1.0] — 2023-07-14
 Added: more brackets for code to track: ⟦⟧, ⟨⟩, ⟪⟫, ⦃⦄, ⦅⦆, ⦇⦈, 【】, 〖〗.
 
